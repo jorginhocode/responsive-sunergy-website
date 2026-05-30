@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 560px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1152px;
+
+  --text-h1: 70px;
+  --text-h2: 46px;
+  --text-normal: 16px;
+  --text-sm: 14px;
+
+  --color-body: #F5F0EB;
+  --color-white: hsl(0, 0%, 98%);
+  --color-primary: #cffd40;
+  --color-primary-alt: #b8e02e;
+  --color-black: #1a3328;
+  --color-black-alt: #070707;
+  --color-text-color: #4A5568;
+  --color-text-color-light: hsl(0, 0%, 75%);
+}
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--color-white);
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h2 {
+    line-height: 1.2;
+    letter-spacing: -0.05rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    line-height: 1.2;
+    font-size: var(--text-h3);
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  button {
+    font-size: var(--text-normal);
+  }
+
+  p {
+    font-size: var(--text-sm);
+    color: var(--color-text-color);
+  }
+}
+
+@utility span-bg {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+}
+
+.container-section {
+  @apply max-w-6xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-4;
+}
